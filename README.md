@@ -15,14 +15,17 @@ To start, simply copy `STableViewController.h` and `STableViewController.m` into
 STableViewController is not very useful on its own. It has to be subclassed to apply your custom
 views and adjust any behavior. To get started quickly, you may include these files for reference:
 
- * `DemoTableViewController` - subclass of `STableViewController`. This declares what views
-   to use for pull-to-refresh and load-more. Also includes samples on what methods to override
-   for data loading and a sample customization to interact with the header and footer views 
-   depending on the situation.
- * `DemoTableHeaderView` - the view used for pull-to-refresh
- * `DemoTableFooterView` - the view used for load-more
+ * `DemoTableViewController` is abandoned. You don't have to read this code.
+ * `DemoRefreshViewController` is subclass of `STableViewController`, `DemoRefreshViewController` is subclass
+    of `DemoRefreshBaseViewController`.
+ * `DemoRefreshBaseViewController` take care of all functions about header view and footer show and hide.
+ * `DemoRefreshViewController` handles things about load data and put data in the head of end of data source for refersh or load more actions.
+ * `DemoTableHeaderView` & `DemoTableFooterView` - you can refer to these two classes. But now the `DemoHeaderView` & `DemoFooterView` are
+    used in this project.
  
 You may also opt to implement your own subclass for `STableViewController` and use your own
-views for pull-to-refresh and load-more.
+views for pull-to-refresh and load-more. And you have to refer to `DemoRefreshBaseViewController` (don't have to do any mofidication) 
+& `DemoRefershViewController` to do things to your data.
+to implement your own
 
 See `STableViewController.h` for more information on the methods available.
