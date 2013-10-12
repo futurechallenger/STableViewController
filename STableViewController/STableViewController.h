@@ -26,7 +26,7 @@
 // The view used for "load more"
 @property (nonatomic, retain) UIView *footerView;
 
-@property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, retain) UITableView *demoTableView;
 @property (readonly) BOOL isDragging;
 @property (readonly) BOOL isRefreshing;
 @property (readonly) BOOL isLoadingMore;
